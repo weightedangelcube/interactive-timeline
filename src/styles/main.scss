@@ -2,6 +2,7 @@
 @use "sass:color";
 
 body {
+    font-family: 'Inter Variable';
     width: 100%;
     background-color: var(--base);
 }
@@ -119,7 +120,7 @@ svg.line {
     transition: box-shadow 0.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-.modal-popup svg {
+.modal-popup svg#close-modal {
     float: right;
 }
 
@@ -154,6 +155,16 @@ svg.line {
 
 .impact-tag {
     float: right;
+}
+
+div.heading {
+    margin: 1rem 0;
+    display: block;
+}
+
+div.heading h1 {
+    margin: 0;
+    display: inline;
 }
 
 .cause-effect {
