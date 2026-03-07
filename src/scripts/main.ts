@@ -5,7 +5,9 @@ type Content = {
     description: string,
     icon: string,
     ideology_meter?: number,
-    ideology_explanation?: string
+    ideology_explanation?: string,
+    effect?: string,
+    cause?: string
 }
 
 let content : Content[] = [
@@ -35,21 +37,21 @@ let content : Content[] = [
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-coins-icon lucide-hand-coins"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg>',
         ideology_meter: 1,
         ideology_explanation: `Adam Smith's idea that society functions best when individuals act in their self-interest aligns with that
-                               of individualism.`
+                               of individualism.`,
+        effect: `→ contributed to the success of the Industrial Revolution`
     },
     {
         date: "1859",
         concept: "John Stuart Mill and On Liberty",
         impact: "strengthened classical liberalism",
         description: `In <i>On Liberty</i>, John Stuart Mill argues that a government exists only to allow individuals as many rights as 
-                      possible. Individual rights and freedoms should only be limited when they may cause harm to another individual. He 
-                      states that it is dangerous to silence a controversial opinion, as said opinion may indicate the need for societal
-                      change.`,
-        // TODO: add more
+                      possible. Individual rights and freedoms should only be limited when they may cause harm to another individual, where
+                      harm could be defined as physical, social, psychological, and more. Another of his principals is that it is dangerous
+                      to silence controversial opinions, as it causes desperation; rather, the right to free speech should be provided to everyone.`,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round-icon lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg>',
         ideology_meter: 0,
-        ideology_explanation: `John Stuart Mill is commonly regarded as the forefather of individualism, and therefore is best aligned
-                               with individualist ideals.`
+        ideology_explanation: `John Stuart Mill is commonly regarded as the forefather of classical liberalism, which states that individual
+                               rights and freedoms should be the priority of society; therefore, he is best aligned with individualist ideals.`
     },
     {
         date: "late 1700s through 1800s",
@@ -57,7 +59,7 @@ let content : Content[] = [
         impact: "strengthened classical liberalism",
         description: `Before the Industrial Revolution, most European countries employed the economic system of mercantilism, where one
                       would export more than one imports. A large number of labourers work to generate profit, but almost all earnings
-                      are kept by the government, which commonly implied royalty. Capitalism, however, challenges mercantilism by 
+                      are kept by the government. Capitalism, however, challenges mercantilism by 
                       declaring that it does not distribute wealth evenly throughout society, and that government intervention is likely
                       to result in a worse product as businesses are not motivated to compete. Capitalism is based on the idea that if 
                       individuals can act freely in their own self-interest, the economy would improve and everyone would benefit. `,
@@ -71,9 +73,9 @@ let content : Content[] = [
                       industrialization, where society changed from hand-made production to machine-driven production in factories. While this
                       provided benefits like sewage and electricity, it also resulted in a shift in power from the wealthy elite to the modern
                       business owner. As a result of <i>laissez-faire</i> capitalism, these indivdiuals were free to employ whatever practices
-                      they wished in their businesses. This commonly resulted in low wages, dangerous working conditions, and abuse of employees,
-                      while simultaneously, factory owners led lavish, leisurely lives. Division of labour was employed, where instead of skilled
-                      workers creating a product from start to finish in their homes, unskilled workers spent their days working a single task.`,
+                      they wished in their businesses. Division of labour was employed, where instead of skilled workers creating a product from
+                      start to finish in their homes, unskilled workers spent their days working a single task. This commonly resulted in low wages,
+                      dangerous working conditions, and abuse of employees, while simultaneously, factory owners led lavish, leisurely lives. `,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track-icon lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>',
     },   
     {
@@ -89,16 +91,18 @@ let content : Content[] = [
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory-icon lucide-factory"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>',
         ideology_meter: 3,
         ideology_explanation: `Although some elements of collectivism and equality are implemented with this law, the British government's
-                               policies in this era remain minimal, and thus are still aligned with the classical liberal values.`
+                               policies in this era remain minimal, and thus are still aligned with the classical liberal values.`,
+        cause: "← elicited by mistreatment of workers during the Industrial Revolution"
     },
     {
         date: "mid-1800s through mid-1900s",
         concept: "Early Feminism",
         impact: "pushed liberalism to adapt",
         description: `As the workforce migrated from the country to the city, many women found themselves playing their traditional role as
-                      an employee in a factory. The idea of feminism developed during this era; that which would allow women equality in terms
+                      an employee in a factory. The idea of feminism developed during this era—that which would allow women equality in terms
                       of rights and freedoms. The womens' suffrage movement also found its footing during this time, where women fought for the
-                      right to vote.`,
+                      right to vote. This was met with severe opposition from the men in power, and it was only in the early 1900s that women
+                      finally received this right in Britain.`,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-biceps-flexed-icon lucide-biceps-flexed"><path d="M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1"/><path d="M15 14a5 5 0 0 0-7.584 2"/><path d="M9.964 6.825C8.019 7.977 9.5 13 8 15"/></svg>',
         ideology_meter: 5,
         ideology_explanation: `The idea of gender equality—or more broadly, the extension of equality to minority groups—is rooted in modern
@@ -110,8 +114,9 @@ let content : Content[] = [
         impact: "challenged classical liberalism",
         description: `Labour unions are groups of individuals who band together in an effort to improve working conditions either for a certain
                       industry or for workers in general. During the late 1800s, some people began to believe that labour unions were necessary
-                      to reduce the negative impacts of laissez-faire capitalism. Unions campaigned for limits on workday hours, safe working 
-                      conditions, job security, medical benefits, and more.`,
+                      to reduce the negative impacts of <i>laissez-faire</i> capitalism. Unions campaigned for limits on workday hours, safe working 
+                      conditions, job security, medical benefits, and more. Labour unions were originally met with resistance from the British
+                      government, as it seemed they would disrupt the free market. They were legalized in 1871 under the Trade Union Act. `,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake-icon lucide-handshake"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>',
         ideology_meter: 6,
         ideology_explanation: `Labour unions use the liberal values of free speech to assemble together and work towards a collective goal; this
@@ -125,7 +130,8 @@ let content : Content[] = [
                       simultaneously operating a productive and profitable factory. Robert Owen, one of the founding figures of this ideology,
                       became the manager of the New Lanark textile mills in 1800, where he restricted working hours and provided education for
                       the children he employed. Owen believed that if the world all embraced socialist values, one could achieve a society that
-                      meets the balance between the need for profit and the needs of the individual.`,
+                      meets the balance between the need for profit and the needs of the individual. Although his ideas were never widely
+                      accepted, they paved the foundation for the development of modern liberalism.`,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hand-heart-icon lucide-hand-heart"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/><path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"/><path d="m2 15 6 6"/><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"/></svg>',
         ideology_meter: 7,
         ideology_explanation: `Utopian socialism operates upon the principle that the business should provide and uplift while still engaging
@@ -139,11 +145,13 @@ let content : Content[] = [
                       Marx believed that the existence of the class system was the vice of all societies. As long as there were rich and poor—factory
                       owners and working class—<i>bourgeoisie</i> and <i>proletariat</i>—there would always be strife, known as class struggle. Marx
                       thought that the working class would gather and seize the means of production to form a dictatorship that would then lead to a
-                      classless, egalitarian society.`,
+                      classless, egalitarian society. Many modern societies claim to operate under communism; however, Marx's ideas have never been
+                      brought to life in their original, intended form.`,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer-icon lucide-hammer"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>',
         ideology_meter: 10,
         ideology_explanation: `Marx believed in total equality and government control, where the state and the people become one entity; this is the
-                               culmination of socialist ideology.`
+                               culmination of socialist ideology.`,
+        cause: "← elicited by mistreatment of workers during the Industrial Revolution"
     },
     {
         date: "early 1900s",
@@ -153,7 +161,8 @@ let content : Content[] = [
                       Thus, the people of Canada turned to greater government intervention, and the ideology of democratic socialism came into focus.
                       The Co-operative Commonwealth Federation was formed during this time in Saskatchewan. The province's population relied mostly
                       on farming and ranching as a source of income, and a drought had left the people destitute. The CCF's action plan included social
-                      programs like shelters for the jobless and homeless, job creation, old age pensions, and subsidized health services.`,
+                      programs like shelters for the jobless and homeless, job creation, old age pensions, and subsidized health services. Many of
+                      these ideas were later adopted by the other provinces and the federal government.`,
         icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wheat-icon lucide-wheat"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg>',
         ideology_meter: 8,
         ideology_explanation: `Social programs are considered a collectivist ideology in that they provide government-funded support to those in need.`
@@ -245,6 +254,8 @@ async function showModal(index: number) {
             
             <p class="ideology-explanation">[ ${content[index].ideology_meter} / 10 ]: ${content[index].ideology_explanation}</p>
             <p class="description">${content[index].description}</p>
+            ${content[index].cause ? `<span class="cause">${content[index].cause}</span>` : ""}
+            ${content[index].effect ? `<span class="effect">${content[index].effect}</span>` : ""}
         `
     } else if (content[index].ideology_meter == 0) {
         modal.innerHTML += `
@@ -260,6 +271,8 @@ async function showModal(index: number) {
 
             <p class="ideology-explanation">[ ${content[index].ideology_meter} / 10 ]: ${content[index].ideology_explanation}</p>
             <p class="description">${content[index].description}</p>
+            ${content[index].cause ? `<span class="cause">${content[index].cause}</span>` : ""}
+            ${content[index].effect ? `<span class="effect">${content[index].effect}</span>` : ""}
         `
     } else {
         modal.innerHTML += `
@@ -270,6 +283,8 @@ async function showModal(index: number) {
             <span class="date">[ ${content[index].date} ]</span>
             <span class="impact-tag">[ ${content[index].impact} ]</span>
             <p class="description">${content[index].description}</p>
+            ${content[index].cause ? `<span class="cause">${content[index].cause}</span>` : ""}
+            ${content[index].effect ? `<span class="effect">${content[index].effect}</span>` : ""}
         `
     }
 

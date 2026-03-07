@@ -176,11 +176,6 @@ div.heading h1 {
     display: inline;
 }
 
-.cause-effect {
-    direction: rtl;
-    display: block;
-}
-
 .footer {
     padding: (calc(5 / 860) * 100vw) + 1.5vw;
     // direction: rtl;
@@ -239,9 +234,16 @@ div.heading h1 {
     }
 }
 
+.cause {
+    float: left;
+}
 
-.credit {
-    font-size: 0.9rem;
+.effect {
+    float: right;
+}
+
+.cause, .effect {
     color: var(--subtext0);
-    text-align: center
+    font-size: 0.9rem;
+    display: block;
 }
