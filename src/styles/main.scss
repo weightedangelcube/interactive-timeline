@@ -242,8 +242,14 @@ div.heading h1 {
     float: right;
 }
 
-.cause, .effect {
+.cause, .effect, .image-alt-text {
     color: var(--subtext0);
     font-size: 0.9rem;
     display: block;
+    margin-bottom: 1em;
+}
+
+.image-alt-text {
+    text-align: center;
+    font-style: italic;
 }
